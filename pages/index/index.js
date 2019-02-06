@@ -167,12 +167,16 @@ Page({
     var winAwards = wx.getStorageSync('winAwards') || {data:[]}
     winAwards.data.push(this.data.time + ": 获得" + awardsConfig.awards[awardIndex].name + '1个')
     wx.setStorageSync('winAwards', winAwards)
+    let names = ''
+    if (app.globalData.userInfo) {
+      names = app.globalData.userInfo.nickName
+    }
 
     // 中奖提示
     setTimeout(function() {
       wx.showModal({
         title: '恭喜',
-        content: '可爱的蓓蓓获得' + (awardsConfig.awards[awardIndex].name),
+        content: '恭喜' + names +'获得' + (awardsConfig.awards[awardIndex].name),
         showCancel: false
       })
       if (wx.getStorageSync('btnShow')) {
