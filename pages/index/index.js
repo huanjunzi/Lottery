@@ -14,11 +14,11 @@ Page({
     info: '',
     time: '',
     // 概率设置
-    rateA: 0.45,
-    rateB: 0.25,
-    rateC: 0.15,
-    rateD: 0.09,
-    rateE: 0.05,
+    rateA: 0.60,
+    rateB: 0.20,
+    rateC: 0.10,
+    rateD: 0.06,
+    rateE: 0.03,
     rateF: 0.01,
     btnShow: true,
     infoShow: 0
@@ -128,7 +128,7 @@ Page({
     // 获取奖品配置
     var awardsConfig = app.awardsConfig,
         runNum = 8
-    if( wx.getStorageSync('btnCount') === 9){
+    if( wx.getStorageSync('btnCount') === 4){
       wx.setStorageSync('btnShow', false)
       this.setData({
         infoShow: wx.getStorageSync('btnCount')
@@ -210,12 +210,12 @@ Page({
     app.awardsConfig = {
       // chance: true,
       awards:[
-        {'index': 0, 'name': '0.50元红包'},
+        {'index': 0, 'name': '0.5元红包'},
         {'index': 1, 'name': '5.20元红包'},
         {'index': 2, 'name': '6.66元红包'},
         {'index': 3, 'name': '8.88元红包'},
-        {'index': 4, 'name': '52.0元红包'},
-        {'index': 5, 'name': '100元红包'}
+        {'index': 4, 'name': '20.00元红包'},
+        {'index': 5, 'name': '100.00元红包'}
       ]
     }
     // console.log('wx.getStorageSync(btnShow)1', wx.getStorageSync('btnShow'))

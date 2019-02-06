@@ -26,7 +26,7 @@
       <view bindtap="getLottery" class="canvas-btn {{btnDisabled}}">抽奖</view>
 		</view>
 	</view>
-  <view wx:if="{{infoShow === 9}}" style="text-align:center;margin-top: 10px;color: red"><text>小可爱，{{infoShow + 1}}次机会用完了~明天再来哦~</text></view>
+  <view wx:if="{{infoShow === 4}}" style="text-align:center;margin-top: 10px;color: red"><text>{{infoShow + 1}}次机会用完了~明天再来哦~</text></view>
 		<view class="main-container">
 			<view class="main-container-btn">
 				<button bindtap="gotoList" type="primary">查看中奖</button>	
